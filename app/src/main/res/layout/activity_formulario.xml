@@ -1,0 +1,45 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.caelum.agenda.FormularioActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        android:id="@+id/formulario_nome"/>
+
+    <EditText
+        android:hint="Site"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/formulario_site"/>
+    <EditText
+        android:hint="Endereço"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/formulario_endereco"
+        />
+    <EditText
+        android:hint="Telefone"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/formulario_telefone"
+        />
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:id="@+id/formulario_nota"
+        android:max="10"/>
+
+</LinearLayout>
+</ScrollView>
