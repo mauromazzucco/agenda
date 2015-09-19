@@ -2,11 +2,14 @@ package com.example.caelum.agenda;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+
+import java.io.File;
 
 /**
  * Created by android5243 on 12/09/15.
@@ -43,7 +46,8 @@ public class FormularioHelper {
     }
 
     public void preencheFormulario(Aluno aluno)
-    {
+    {   Uri localFoto = Uri.fromFile(new File(aluno.getCaminhoFoto()));
+        this.foto.setImageURI(localFoto);
         this.aluno = aluno;
         this.nome.setText(aluno.getNome());
         this.telefone.setText(aluno.getTelefone());
