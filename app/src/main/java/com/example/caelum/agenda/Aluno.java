@@ -1,15 +1,18 @@
 package com.example.caelum.agenda;
 
+import java.io.Serializable;
+
 /**
  * Created by android5243 on 12/09/15.
  */
-public class Aluno {
+public class Aluno implements Serializable {
     private String nome;
     private String telefone;
     private String endereco;
     private String site;
     private Double nota;
     private Long id;
+    private String caminhoFoto;
 
 
     public String getNome() {
@@ -58,6 +61,14 @@ public class Aluno {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCaminhoFoto() {
+        return caminhoFoto;
+    }
+
+    public void setCaminhoFoto(String caminhoFoto) {
+        this.caminhoFoto = caminhoFoto;
     }
 
     @Override
